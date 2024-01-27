@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FlightBooking  //Do not cahnge the namespace name
+namespace FlightBooking  //DO NOT change the namespace name
 {
-    public class Booking  //Do not change the class name
+    public class Booking  //DO NOT change the class name
     {
         //Implement properties
 

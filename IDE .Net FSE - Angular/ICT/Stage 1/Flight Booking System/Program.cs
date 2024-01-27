@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace FlightBooking  //Do not change the namespace name
+namespace FlightBooking  //DO NOT change the namespace name
 {
-    public class Program //Do not change the class name
+    public class Program //DO NOT change the class name
     {
-        public static void Main(string[] args) //Do not change the 'Main' method signature
+        public static void Main(string[] args) //DO NOT change the 'Main' method signature
         {
             //Implement code here
             Console.WriteLine("Enter the choice");
@@ -34,7 +34,7 @@ namespace FlightBooking  //Do not change the namespace name
                 case 2:
                     Console.WriteLine("Enter the Airplane Id:");
                     id = int.Parse(Console.ReadLine());
-                    FlightBooking obj = p.GetAirplaneById(id);
+                    Booking obj = p.GetAirplaneById(id);
                     Console.WriteLine("AirplaneID BookingFrom BookingTo TotalSeats TicketPrice SeatStatus");
                     Console.WriteLine(obj);
                     break;
@@ -57,7 +57,7 @@ namespace FlightBooking  //Do not change the namespace name
             }
         }
 
-        public void UpdateAirplanePrice(int id, int price) //Do not change the method signature
+        public void UpdateAirplanePrice(int id, int price) //DO NOT change the method signature
         {
             //Implement code here
             DBConnection db = new DBConnection();
@@ -78,7 +78,7 @@ namespace FlightBooking  //Do not change the namespace name
             connection.Close();
         }
 
-        public Booking GetAirplaneById(int id) //Do not change the method signature
+        public Booking GetAirplaneById(int id) //DO NOT change the method signature
         {
             //Implement code here
             DBConnection db = new DBConnection();
@@ -114,7 +114,7 @@ namespace FlightBooking  //Do not change the namespace name
             return book;
         }
 
-        public int CalculateCost(string corporateCode, int noOfPassenger, Booking booking)  //Do not change the method signature
+        public int CalculateCost(string corporateCode, int noOfPassenger, Booking booking)  //DO NOT change the method signature
         {
             //Implement code here
             int cost = noOfPassenger*booking.TicketPrice;

@@ -8,9 +8,9 @@ using System.Xml;
 using System.IO;
 using System.Configuration;
 
-namespace FlightBooking  //Do not change the namespace name
+namespace FlightBooking  //DO NOT change the namespace name
 {
-    public class DBConnection  //Do not change the class name
+    public class DBConnection  //DO NOT change the class name
     {
         //Implement code here
 
