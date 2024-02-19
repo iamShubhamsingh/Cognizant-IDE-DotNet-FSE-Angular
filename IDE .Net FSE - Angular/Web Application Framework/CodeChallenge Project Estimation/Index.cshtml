@@ -1,0 +1,72 @@
+@model IEnumerable<ProjectEstimation.Models.UserStory>
+
+@{
+    ViewBAg.Title = "User Story List";
+
+    int Count = 0;
+
+    int Mandays = 16;
+
+}
+
+<title>@ViewBag.Title</title>
+<h2>User Story List</h2>
+<table class = "table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Complexity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StoryPoint)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        Count++;
+
+        Sum += item.StoryPoint;
+
+        <tr>
+            <td>
+                @Html.DisplayFor(x => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(x => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(x => item.Complexity)
+            </td>
+            <td>
+                @Html.DisplayFor(x => item.StoryPoint)
+            </td>
+            <td>
+                @HtmlActionLink("Edit", "Edit", new { id = item.UserStoryID })
+
+                @HtmlActionLink("Delete", "Delete", new { id = item.UserStoryID })
+            </td>
+        </tr>
+    }
+</table>
+<div style = "margin-left: 645px">
+    <b>User story count: </b><span id = "count">@Count</span>
+
+    <br />
+
+    <b>Total story points: </b><span id = "sum">@Sum</span>
+
+    <br />
+
+    <b>Estimated man days required: </b><span id = "mandays">@(Mandays * Sum) hours</span>
+</div>
+
+<p>
+    @Html.ActionLink("Add New User Story", "Create")
+</p>
