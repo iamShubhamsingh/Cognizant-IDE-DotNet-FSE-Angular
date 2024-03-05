@@ -1,0 +1,13 @@
+@model ASPNET6_Template.Models.LoginPage
+
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+@{
+    <h1 id="message">Welcome @Model.UserName</h1>
+}
+
+<div>
+    <a asp-action="UserLogin">Back to Login page</a>
+</div>
