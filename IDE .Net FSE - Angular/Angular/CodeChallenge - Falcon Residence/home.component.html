@@ -1,0 +1,39 @@
+
+<!--Fill the code-->
+
+<body style="background-colour: rgb(138, 138, 130)">
+    <form>
+        <table>
+            <tr *ngIf="flag == '1'">
+                <td>Home Type</td>
+                <td><input type="text" name="homeType" id="homeType" [(ngModel)]="home.homeType" #ctrl="ngModel" value="" /></td>
+            </tr>
+            <tr *ngIf="flag == '2'">
+                <td>Search Home Type</td>
+                <td><input type="text" name="searchHomeType" id="searchHomeType" [(ngModel)]="home.homeType" #ctrl="ngModel" value="" /></td>
+            </tr>
+            <tr *ngIf="flag == '1'">
+                <td>Location</td>
+                <td><input type="text" name="location" id="location" [(ngModel)]="home.location" #ctrl="ngModel" value="" /></td>
+            </tr>
+            <tr *ngIf="flag == '2'">
+                <td>Location</td>
+                <td><input type="text" name="searchLocation" id="searchLocation" [(ngModel)]="home.searchLocation" #ctrl="ngModel" value="" /></td>
+            </tr>
+            <tr *ngIf="flag == '1'">
+                <td>Contact Number</td>
+                <td><input type="text" name="contactNumber" id="contactNumber" [(ngModel)]="home.contactNumber" #ctrl="ngModel" value="" /></td>
+            </tr>
+            <tr *ngIf="flag == '1'">
+                <td>Rent</td>
+                <td><input type="text" name="rent" id="rent" [(ngModel)]="home.rent" #ctrl="ngModel" value="" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" *ngIf="flag == '1'" name="register" id="register" (click)="register()" value="Post" />
+                    <input type="button" *ngIf="flag == '2'" name="register" id="register" (click)="search()" value="Search" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>

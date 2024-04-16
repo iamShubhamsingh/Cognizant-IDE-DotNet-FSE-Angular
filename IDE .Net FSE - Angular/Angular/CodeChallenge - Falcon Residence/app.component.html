@@ -1,0 +1,10 @@
+<body style="background-color: #52BE80;">
+ 
+    <!--fill the code-->
+    <nav class="nav">
+        <a id="propertyDetails" name="propertyDetails" class="nav-link" [routerLink]="['/home']" [queryParams]="{flag: '1'}">Property Details</a>
+        <a id="searchHome" name="searchHome" class="nav-link" [routerLink]="['/home']" [queryParams]="{flag: '2'}">Search Home</a>
+    </nav>
+       <router-outlet></router-outlet>
+   
+   </body>
